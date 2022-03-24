@@ -11,14 +11,6 @@
   let githubIcon = '/assets/github120.png';
 </script>
 
-<MaterialButton
-  id="two"
-  text="Button 2"
-  onClickFunction={() => {
-    console.log('you clicked Button 2');
-  }}
-/>
-
 <div>
   <h1>Meet The Team!</h1>
 </div>
