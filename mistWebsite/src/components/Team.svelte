@@ -264,6 +264,10 @@
     color: rgb(90, 167, 218);
   }
 
+  .github {
+    color: black;
+  }
+
   .button {
     border: none;
     outline: 0;
@@ -272,18 +276,5 @@
     text-align: center;
     cursor: pointer;
     width: 100%;
-  }
-
-  .button1 {
-    background-color: black;
-    color: ohite;
-  }
-
-  .button2 {
-    background-color: blue;
-  }
-
-  .button:hover {
-    background-color: blue;
   }
 </style>

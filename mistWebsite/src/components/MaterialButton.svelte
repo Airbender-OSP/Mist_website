@@ -23,6 +23,7 @@
     aria-hidden="true"
     src={icon}
     alt="img"
+    border-radius="20%"
   />
   <span class="mdc-button__label">{text}</span>
 </button>
