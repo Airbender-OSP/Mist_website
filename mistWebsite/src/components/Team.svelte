@@ -1,144 +1,231 @@
 <script>
   /* import assets from './assets'; */
-  import MaterialButton from "./MaterialButton.svelte";
+  import MaterialButton from './MaterialButton.svelte';
+  let anthony = '/images/Anthony.jpg';
+  let eric = '/images/Eric.jpg';
+  let kristen = '/images/Kristen.png';
+  let leo = '/images/Leo.jpeg';
+  let stew = '/images/Stew.png';
+  let linkedInIcon = '/images/linkedIn.png';
+  let gmailIcon = '/images/gmail.png';
+  let githubIcon = '/assets/github120.png';
 </script>
 
-<MaterialButton id="one" text="Button 1" onClickFunction={() => {
-  console.log('you clicked Button 1')
-}}
+<MaterialButton
+  id="two"
+  text="Button 2"
+  onClickFunction={() => {
+    console.log('you clicked Button 2');
+  }}
 />
-
-<MaterialButton id="two" text="Button 2" onClickFunction={() => {
-  console.log('you clicked Button 2')
-}}
-/>
-
 
 <div>
   <h1>Meet The Team!</h1>
 </div>
 
-<div class="row" > 
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src={anthony} alt="Anthony" style="width:100%" />
+      <div class="container">
+        <h2>Anthony Marin</h2>
+        <p class="title">Software Engineer</p>
+        <MaterialButton
+          class="github"
+          id="antGH"
+          icon={githubIcon}
+          text="Github"
+          onClickFunction={() => {
+            window.open('github.com/anthonymarinated');
+          }}
+        />
+
+        <MaterialButton
+          class="linkedin"
+          id="antLI"
+          text="LinkedIn"
+          icon={linkedInIcon}
+          onClickFunction={() => {
+            window.open('https://www.linkedin.com/in/anthmari/');
+          }}
+        />
+
+        <MaterialButton
+          class="email"
+          id="antEmail"
+          text="Email"
+          icon={gmailIcon}
+          onClickFunction={() => {
+            window.open('anthonymarin718@gmail.com');
+          }}
+        />
+      </div>
+    </div>
+  </div>
 
   <div class="column">
-        <div class="card">
-          <img src="" alt="Anthony" style="width:100%">
-          <div class="container">
-            <h2>Anthony Marin</h2>
-            <p class="title">Software Engineer</p>
-              <p>
-                
-                <button class="button1">
-                  <a href="github.com/anthonymarinated">Github</a>
-                </button>
-              </p>
-              <p>
-                <button class="button2">
-                  <a href="https://www.linkedin.com/in/anthmari/">LinkedIn</a>
-                </button>
-              </p>
-              <a href="anthonymarin718@gmail.com">Email</a>          
-          </div>
-        </div>
+    <div class="card" margin="auto">
+      <img src={eric} alt="Eric" style="width:100%" />
+      <div class="container">
+        <h2>Eric Lemay</h2>
+        <p class="title">Software Engineer</p>
+        <MaterialButton
+          class="github"
+          id="ericGH"
+          icon={githubIcon}
+          text="Github"
+          onClickFunction={() => {
+            window.open('github.com/anthonymarinated');
+          }}
+        />
+
+        <MaterialButton
+          class="linkedin"
+          id="ericLI"
+          icon={linkedInIcon}
+          text="LinkedIn"
+          onClickFunction={() => {
+            window.open('https://www.linkedin.com/in/eric-lemay-379659231/');
+          }}
+        />
+
+        <MaterialButton
+          class="email"
+          id="ericEmail"
+          text="Email"
+          icon={gmailIcon}
+          onClickFunction={() => {
+            window.open('ericrogerlemay@gmail.com');
+          }}
+        />
       </div>
-    
-      <div class="column">
-        <div class="card">
-          <img src="" alt="Eric" style="width:100%">
-          <div class="container">
-            <h2>Eric Lemay</h2>
-            <p class="title">Software Engineer</p>
-              <p>
-                <button class="button1">
-                  <a href="github.com/StygianLiege">Github</a>
-                </button>
-              </p>
-              <p>
-                <button class="button2">
-                  <a href="https://www.linkedin.com/in/eric-lemay-379659231/">LinkedIn</a>
-                </button>
-              </p>
-              <a href="ericrogerlemay@gmail.com" alt="alt">Email</a>          
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src={kristen} alt="Kristen" style="width:100%" />
+      <div class="container">
+        <h2>Kristen Althoff</h2>
+        <p class="title">Software Engineer</p>
+        <MaterialButton
+          class="github"
+          id="kristenGH"
+          icon={githubIcon}
+          text="Github"
+          onClickFunction={() => {
+            window.open('https://github.com/KristenWAlthoff');
+          }}
+        />
+
+        <MaterialButton
+          class="linkedin"
+          id="kristenLI"
+          text="LinkedIn"
+          icon={linkedInIcon}
+          onClickFunction={() => {
+            window.open(
+              'https://www.linkedin.com/in/kristen-althoff-3a4765b9/'
+            );
+          }}
+        />
+
+        <MaterialButton
+          class="email"
+          id="kristenEmail"
+          text="Email"
+          icon={gmailIcon}
+          onClickFunction={() => {
+            window.open('kristenwalthoff@gmail.com');
+          }}
+        />
       </div>
+    </div>
+  </div>
 
+  <div class="column">
+    <div class="card">
+      <img src={leo} alt="Leonoor" style="width:100%" />
+      <div class="container">
+        <h2>Leonoor Rinke de Wit</h2>
+        <p class="title">Software Engineer</p>
+        <MaterialButton
+          class="github"
+          id="leoGH"
+          text="Github"
+          icon={githubIcon}
+          onClickFunction={() => {
+            window.open('https://github.com/lrinkedewit');
+          }}
+        />
 
+        <MaterialButton
+          class="linkedin"
+          id="leoLI"
+          text="LinkedIn"
+          icon={linkedInIcon}
+          onClickFunction={() => {
+            window.open('https://www.linkedin.com/in/leonoorrinkedewit/');
+          }}
+        />
 
-      <div class="column">
-        <div class="card">
-          <img src="" alt="Kristen" style="width:100%">
-          <div class="container">
-            <h2>Kristen Althoff</h2>
-            <p class="title">Software Engineer</p>
-              <p>
-                <button class="button1">
-                  <a href="https://github.com/KristenWAlthoff">Github</a>
-                </button>
-              </p>
-              <p>
-                <button class="button2">
-                  <a href="https://www.linkedin.com/in/kristen-althoff-3a4765b9/">LinkedIn</a>
-                </button>
-              </p>
-              <a href="kristenwalthoff@gmail.com">Email</a>          
-          </div>
-        </div>
+        <MaterialButton
+          class="email"
+          id="leoEmail"
+          text="Email"
+          icon={gmailIcon}
+          onClickFunction={() => {
+            window.open('lrinkedewit@gmail.com');
+          }}
+        />
       </div>
+    </div>
+  </div>
 
-        
-      <div class="column">
-        <div class="card">
-          <img src="" alt="Leonoor" style="width:100%">
-          <div class="container">
-            <h2>Leonoor Rinke de Wit</h2>
-            <p class="title">Software Engineer</p>
-              <p>
-                <button class="button1">
-                  <a href="https://github.com/lrinkedewit">Github</a>
-                </button>
-              </p>
-              <p>
-                <button class="button2">
-                  <a href="https://www.linkedin.com/in/leonoorrinkedewit/">LinkedIn</a>
-                </button>
-              </p>
-              <a href="lrinkedewit@gmail.com">Email</a>          
-          </div>
-        </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <img src={stew} alt="Stewart" style="width:100%" />
+        <h2>Stewart Elmore</h2>
+        <p class="title">Software Engineer</p>
+        <MaterialButton
+          class="github"
+          id="stewGH"
+          icon={githubIcon}
+          text="Github"
+          onClickFunction={() => {
+            window.open('https://github.com/selmore7');
+          }}
+        />
+
+        <MaterialButton
+          class="linkedin"
+          id="stewLI"
+          text="LinkedIn"
+          icon={linkedInIcon}
+          onClickFunction={() => {
+            window.open('https://www.linkedin.com/in/stewart-elmore/');
+          }}
+        />
+
+        <MaterialButton
+          class="email"
+          id="stewEmail"
+          text="Email"
+          icon={gmailIcon}
+          onClickFunction={() => {
+            window.open('stewart.elmore@gmail.com');
+          }}
+        />
       </div>
-
-
-      <div class="column">
-        <div class="card">
-          <img src="" alt="Stewart" style="width:100%">
-          <div class="container">
-            <h2>Stewart Elmore</h2>
-            <p class="title">Software Engineer</p>
-              <p>
-                <button class="button1">
-                  <a href="https://github.com/selmore7">Github</a>
-                </button>
-              </p>
-              <p>
-                <button class="button2">
-                  <a href="https://www.linkedin.com/in/stewart-elmore/">LinkedIn</a>
-                </button>
-              </p>
-              <a href="stewart.elmore@gmail.com">Email</a>          
-          </div>
-        </div>
-      </div>  
-
-
+    </div>
+  </div>
 </div>
 
-
 <style global lang="scss">
-  
-@use "@material/button/styles";
+  @use '@material/button/styles';
 
-  h1{
+  h1 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -159,14 +246,14 @@
 
   .row {
     margin: auto;
-    width: max-content
+    width: max-content;
   }
 
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     outline: 2px solid rgb(8, 165, 238);
     margin: auto;
-    width: max-content;
+    width: 300px;
     border-radius: 20px;
   }
 
@@ -197,14 +284,14 @@
 
   .button1 {
     background-color: black;
-    color:ohite;
+    color: ohite;
   }
 
   .button2 {
     background-color: blue;
   }
- 
+
   .button:hover {
     background-color: blue;
-  } 
+  }
 </style>
