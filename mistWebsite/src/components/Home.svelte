@@ -4,11 +4,16 @@
   import Team from './Team.svelte';
   import { fade, fly, scale, blur, slide } from 'svelte/transition';
   import { circIn } from 'svelte/easing';
-  let dog = '../../public/images/dog.png';
+  let dog = '/images/dog.png';
+  let corgi = '/images/corgi.jpeg';
+  let pupps = 'images/puppies.jpeg';
+  let cutie = 'images/cutie.jpeg';
+
   let y;
   $:console.log(y);
   let modalOpen = true;
   $:console.log(window.screen.availHeight);
+  console.log('../../public/images/dog.png');
 </script>
 
 
@@ -31,12 +36,12 @@
         Start button 'on click' sends a fetch request to the user's linked SQL
         database. The fetch request sends a custom query to get the users current
         session number.
-        <img src={dog} alt="dog"/>
-        </p>
+      </p>
+      <img src={dog} alt="dog" height='500px' width='1000px' float='right'/>
       </div>
     {/if}
     
-    {#if y > 235}
+    {#if y > 690}
       <div class='stopbutton' transition:slide={{ x: 400, delay: 100, duration: 400, easing: circIn }}>
         <h2>Stop Button</h2>
         <p>
@@ -44,19 +49,22 @@
         the users metric table in their SQL database where the session number is
         equal to the current session number.
         </p>
+        <img src={corgi} alt='corgi' height='500px' width='1000px'/>
       </div>
     {/if}
     
-    {#if y > 300}
+    {#if y > 1300}
       <div class='generatemetrics' transition:slide={{ x: 400, delay: 100, duration: 1000, easing: circIn }}>
         <h2>Generate Metrics</h2>
-        <p>Track your metrics with the click of a button!</p>
+        <p>Track your metrics with the click of a button! Track your metrics with the click of a button! Track your metrics with the click of a button!</p>
+        <img src={pupps} alt='pups' height='500px' width='1000px'/>
       </div>
     {/if}
 
-    {#if y > 400}
+    {#if y > 1900}
       <div class='stopbutton' transition:slide={{ x: 400, delay: 100, duration: 1000, easing: circIn }}>
         <h2>Clear Metrics</h2>
+        <img src={cutie} alt='cutie' height='500px' width='1000px'/>
       </div>
     {/if}
 
@@ -82,6 +90,7 @@
     text-align: left;
     padding-left: 10px;
     max-width: 40%;
+    float:left;
   }
   div {
     margin: auto;
