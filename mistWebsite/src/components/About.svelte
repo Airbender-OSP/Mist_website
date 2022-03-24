@@ -24,7 +24,7 @@
     totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam 
     quasi aliquam eligendi, placeat qui corporis!
   </p>
-  <div class="npmdownload">NPM Download</div>
+  <div class="npmdownloadcontainer">NPM Download</div>
 </div>
 
 <style>
@@ -36,11 +36,12 @@
     width: 95%;
     border-width: 1px;
     border-radius: 20px;
-    border-color: grey;
+    border-color: rgba(191,193,195,0.79);
     border: solid;
   }
-  .npmdownload{
+  .npmdownloadcontainer{
     margin-top: 100px;
+    margin-bottom: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
     width: 40%;

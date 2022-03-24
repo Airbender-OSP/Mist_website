@@ -1,13 +1,24 @@
 <script>
   /* import assets from './assets'; */
-
+  import MaterialButton from "./MaterialButton.svelte";
 </script>
+
+<MaterialButton id="one" text="Button 1" onClickFunction={() => {
+  console.log('you clicked Button 1')
+}}
+/>
+
+<MaterialButton id="two" text="Button 2" onClickFunction={() => {
+  console.log('you clicked Button 2')
+}}
+/>
+
 
 <div>
   <h1>Meet The Team!</h1>
 </div>
 
-<div class="row"> 
+<div class="row" > 
 
   <div class="column">
         <div class="card">
@@ -16,6 +27,7 @@
             <h2>Anthony Marin</h2>
             <p class="title">Software Engineer</p>
               <p>
+                
                 <button class="button1">
                   <a href="github.com/anthonymarinated">Github</a>
                 </button>
@@ -46,7 +58,7 @@
                   <a href="https://www.linkedin.com/in/eric-lemay-379659231/">LinkedIn</a>
                 </button>
               </p>
-              <a href="https://www.linkedin.com/in/eric-lemay-379659231/" alt="alt">Email</a>          
+              <a href="ericrogerlemay@gmail.com" alt="alt">Email</a>          
           </div>
         </div>
       </div>
@@ -69,7 +81,7 @@
                   <a href="https://www.linkedin.com/in/kristen-althoff-3a4765b9/">LinkedIn</a>
                 </button>
               </p>
-              <a href="https://www.linkedin.com/in/kristen-althoff-3a4765b9/">Email</a>          
+              <a href="kristenwalthoff@gmail.com">Email</a>          
           </div>
         </div>
       </div>
@@ -121,10 +133,10 @@
 
 </div>
 
-<style>
-  div.row{
-    margin: auto;
-  } 
+
+<style global lang="scss">
+  
+@use "@material/button/styles";
 
   h1{
     padding-top: 40px;
@@ -145,8 +157,17 @@
     }
   }
 
+  .row {
+    margin: auto;
+    width: max-content
+  }
+
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    outline: 2px solid rgb(8, 165, 238);
+    margin: auto;
+    width: max-content;
+    border-radius: 20px;
   }
 
   .container {
@@ -182,8 +203,8 @@
   .button2 {
     background-color: blue;
   }
-/* 
+ 
   .button:hover {
     background-color: blue;
-  } */
+  } 
 </style>

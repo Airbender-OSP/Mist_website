@@ -1,7 +1,8 @@
 <script>
   import { fade, fly, scale, blur, slide } from 'svelte/transition';
 
-  // let y;
+	let dog = '../../public/images/dog.png';
+
 </script>
 
 <!-- <svelte:window bind:scrollY={y}/> -->
@@ -15,7 +16,7 @@
     Start button 'on click' sends a fetch request to the user's linked SQL
     database. The fetch request sends a custom query to get the users current
     session number.
-    <img src="../public/assets/dog.png" alt="Anthony" style="width:100%" />
+    <img {dog} alt="Anthony" style="width:100%" />
   </p>
 
   <h2>Stop Button</h2>
