@@ -75,6 +75,7 @@
     border-width: 3px;
     display: flex;
     justify-content: space-between;
+    padding-left: 60px;
   }
   /* .mist {
   } */
