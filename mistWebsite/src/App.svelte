@@ -3,11 +3,11 @@
   import Home from './components/Home.svelte';
   import Features from './components/Features.svelte';
   import About from './components/About.svelte';
-  // import githubIcon from '../public/assets/github120.png';
 
   import Tutorial from './components/Tutorial.svelte';
   import Team from './components/Team.svelte';
 
+  let githubIcon = '/assets/github120.png';
   let homeToggle = true;
   let docsToggle = false;
   let tutorialToggle = false;
@@ -46,9 +46,7 @@
       <button on:click={() => home()}>Home</button>
       <button on:click={() => docs()}>Docs</button>
     {/if}
-    <a href="google.com"
-      ><img src="../public/assets/github120.png" alt="Github Link" /></a
-    >
+    <a href="google.com"><img src={githubIcon} alt="Github Link" /></a>
     <!-- <a href="#"><img /></a> -->
   </div>
 </header>
@@ -69,7 +67,7 @@
   <!-- <button on:click={() => home()}>Back to home page</button> -->
 </footer>
 
-<style>
+<style global lang="scss">
   header {
     border-bottom: solid;
     border-width: 3px;

@@ -44,6 +44,7 @@ export default {
   plugins: [
     // image(),
     svelte({
+      // preprocess: sveltePreprocess(),
       compilerOptions: {
         // enable run-time checks when not in production
         dev: !production,
