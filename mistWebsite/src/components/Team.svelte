@@ -1,6 +1,8 @@
 <script>
   /* import assets from './assets'; */
   import MaterialButton from './MaterialButton.svelte';
+  // import sass from 'node-sass';
+
   let anthony = '/images/Anthony.jpg';
   let eric = '/images/Eric.jpg';
   let kristen = '/images/Kristen.png';
@@ -28,7 +30,7 @@
           icon={githubIcon}
           text="Github"
           onClickFunction={() => {
-            window.open('github.com/anthonymarinated');
+            window.open('https://github.com/anthonymarinated');
           }}
         />
 
@@ -67,7 +69,7 @@
           icon={githubIcon}
           text="Github"
           onClickFunction={() => {
-            window.open('github.com/anthonymarinated');
+            window.open('https://github.com/StygianLiege');
           }}
         />
 
@@ -216,6 +218,7 @@
 
 <style global lang="scss">
   @use '@material/button/styles';
+  @import '../../public/global.scss';
 
   h1 {
     padding-top: 40px;

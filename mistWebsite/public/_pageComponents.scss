@@ -1,0 +1,20 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    @include flexCenter();
+
+    background: $backgroundImage;   
+    color: $textColor;
+    button{
+       background: $primaryBtn; 
+    }
+}
+
+body {
+    background: $backgroundImage;
+}
+

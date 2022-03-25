@@ -44,6 +44,7 @@ export default {
   plugins: [
     // image(),
     svelte({
+      // preprocess: sveltePreprocess(),
       compilerOptions: {
         // enable run-time checks when not in production
         dev: !production,
@@ -56,7 +57,6 @@ export default {
           },
         }),
       ],
-      preprocess: sveltePreprocess(),
     }),
     // we'll extract any component CSS out into
     // a separate file - better for performance

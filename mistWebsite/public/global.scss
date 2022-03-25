@@ -1,16 +1,4 @@
-$primaryBtn : navy;
+@import './variables';
+@import './pageComponents';
 
 
-
-
-header {
-    background: lightblue;
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    justify-content: center;
-}
-
-body {
-    background: lightblue;
-}
