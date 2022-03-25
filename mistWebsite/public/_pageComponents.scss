@@ -4,10 +4,13 @@
     align-items: center;
 }
 
+h1{
+    color: navy;
+}
 header {
     @include flexCenter();
-
-    background: $backgroundImage;   
+    font-family: $primaryFont;
+    background: $mistBlue;   
     color: $textColor;
     button{
        background: $primaryBtn; 
@@ -15,6 +18,7 @@ header {
 }
 
 body {
-    background: $backgroundImage;
+    background: $mistBlue;
+    font-family: $primaryFont;
 }
 
