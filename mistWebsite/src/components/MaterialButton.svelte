@@ -13,6 +13,7 @@
 </script>
 
 <button
+  style="background-color: #f6f6f6; color: #9d9d9d"
   class="mdc-button mdc-button--raised mdc-button--leading"
   {id}
   on:click={onClickFunction}
@@ -27,3 +28,9 @@
   />
   <span class="mdc-button__label">{text}</span>
 </button>
+
+<style>
+  /* .mdc-button mdc-button--raised mdc-button--leading {
+    background-color: #f6f6f6;
+  } */
+</style>

@@ -3,10 +3,10 @@
   import MaterialButton from './MaterialButton.svelte';
   // import sass from 'node-sass';
 
-  let anthony = '/images/Anthony.jpg';
-  let eric = '/images/Eric.jpg';
+  let anthony = '/images/Anthony.png';
+  let eric = '/images/Eric.png';
   let kristen = '/images/Kristen.png';
-  let leo = '/images/Leo.jpeg';
+  let leo = '/images/Leo.png';
   let stew = '/images/Stew.png';
   let linkedInIcon = '/images/linkedIn.png';
   let gmailIcon = '/images/gmail.png';
@@ -20,10 +20,18 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src={anthony} alt="Anthony" style="width:100%" />
+      <img
+        src={anthony}
+        alt="Anthony"
+        style="width:80%; margin: auto; margin-top: 20px; height: 200px; width: 200px"
+      />
       <div class="container">
-        <h2>Anthony Marin</h2>
-        <p class="title">Software Engineer</p>
+        <h2 style="font-size: 20px">
+          Anthony Marin<br /><span style="font-size: 16px; color: #9d9d9d"
+            >Software Engineer</span
+          >
+        </h2>
+        <!-- <p class="title">Software Engineer</p> -->
         <MaterialButton
           class="github"
           id="antGH"
@@ -59,10 +67,18 @@
 
   <div class="column">
     <div class="card" margin="auto">
-      <img src={eric} alt="Eric" style="width:100%" />
+      <img
+        src={eric}
+        alt="Eric"
+        style="width:80%; margin: auto; margin-top: 20px; height: 200px; width: 200px"
+      />
       <div class="container">
-        <h2>Eric Lemay</h2>
-        <p class="title">Software Engineer</p>
+        <h2 style="font-size: 20px">
+          Eric Lemay<br /><span style="font-size: 16px; color: #9d9d9d"
+            >Software Engineer</span
+          >
+        </h2>
+        <!-- <p class="title">Software Engineer</p> -->
         <MaterialButton
           class="github"
           id="ericGH"
@@ -98,10 +114,18 @@
 
   <div class="column">
     <div class="card">
-      <img src={kristen} alt="Kristen" style="width:100%" />
+      <img
+        src={kristen}
+        alt="Kristen"
+        style="width:80%; margin: auto; margin-top: 20px; height: 200px; width: 200px"
+      />
       <div class="container">
-        <h2>Kristen Althoff</h2>
-        <p class="title">Software Engineer</p>
+        <h2 style="font-size: 20px">
+          Kristen Althoff<br /><span style="font-size: 16px; color: #9d9d9d"
+            >Software Engineer</span
+          >
+        </h2>
+        <!-- <p class="title">Software Engineer</p> -->
         <MaterialButton
           class="github"
           id="kristenGH"
@@ -139,10 +163,18 @@
 
   <div class="column">
     <div class="card">
-      <img src={leo} alt="Leonoor" style="width:100%" />
+      <img
+        src={leo}
+        alt="Leonoor"
+        style="width:80%; margin: auto; margin-top: 20px; height: 200px; width: 200px"
+      />
       <div class="container">
-        <h2>Leonoor Rinke de Wit</h2>
-        <p class="title">Software Engineer</p>
+        <h2 style="font-size: 20px">
+          Leonoor Rinke de Wit<br /><span
+            style="font-size: 16px; color: #9d9d9d">Software Engineer</span
+          >
+        </h2>
+        <!-- <p class="title">Software Engineer</p> -->
         <MaterialButton
           class="github"
           id="leoGH"
@@ -179,9 +211,17 @@
   <div class="column">
     <div class="card">
       <div class="container">
-        <img src={stew} alt="Stewart" style="width:100%" />
-        <h2>Stewart Elmore</h2>
-        <p class="title">Software Engineer</p>
+        <img
+          src={stew}
+          alt="Stewart"
+          style="width:80%; margin: auto; margin-top: 20px; height: 200px; width: 200px"
+        />
+        <h2 style="font-size: 20px">
+          Stewart Elmore<br /><span style="font-size: 16px; color: #9d9d9d"
+            >Software Engineer</span
+          >
+        </h2>
+        <!-- <p class="title">Software Engineer</p> -->
         <MaterialButton
           class="github"
           id="stewGH"
@@ -246,7 +286,7 @@
 
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    outline: 2px solid rgb(8, 165, 238);
+    outline: 2px solid #9d9d9d;
     margin: auto;
     width: 300px;
     border-radius: 20px;
@@ -254,6 +294,8 @@
 
   .container {
     padding: 0 16px;
+    display: flex;
+    flex-direction: column;
   }
 
   .container::after,
@@ -264,7 +306,7 @@
   }
 
   .title {
-    color: rgb(90, 167, 218);
+    color: #6194bc;
   }
 
   .github {

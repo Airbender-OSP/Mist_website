@@ -1,56 +1,87 @@
 <script></script>
 
-<div>
-  <h1>About</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-    optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-    obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-    nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-    tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-    quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
-    sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-    recusandae alias error harum maxime adipisci amet laborum. Perspiciatis 
-    minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit 
-    quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur 
-    fugiat, temporibus enim commodi iusto libero magni deleniti quod quam 
-    consequuntur! Commodi minima excepturi repudiandae velit hic maxime
-    doloremque. Quaerat provident commodi consectetur veniam similique ad 
-    earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo 
-    fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore 
-    suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
-    modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam 
-    totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam 
-    quasi aliquam eligendi, placeat qui corporis!
-  </p>
-  <div class="npmdownloadcontainer">NPM Download</div>
+<div id="aboutDiv">
+  <div id="aboutTitle">
+    <h1>About</h1>
+  </div>
+  <div id="featuresDiv">
+    <h3>
+      Mist: an application performance monitoring tool for unpublished
+      CloudFlare workers.
+    </h3>
+    <p id="aboutP" style="text-align: left">
+      Mist provides a log of the following performance metrics for monitored
+      workers:<br />
+      <br />
+      ➡️ &ensp HTTP request and response times<br />
+      ➡️ &ensp Request durations<br />
+      ➡️ &ensp Response status codes<br />
+      ➡️ &ensp History of previously recorded monitoring sessions<br />
+    </p>
+    <p style="text-align: center">
+      Check out the
+      <span style="text-decoration: underline" on:click>tutorial</span> to get started!
+    </p>
+  </div>
+  <div id="npmdownloadcontainer">NPM Download</div>
 </div>
 
 <style>
-  h1 {
-    margin-top: 50px;
+  /* h1 {
+    margin-top: 5em;
+  } */
+  h3 {
+    font-weight: 200;
   }
-  div {
+  p {
+    font-weight: 100;
+  }
+  #aboutDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     margin: auto;
-    width: 95%;
-    border-width: 1px;
+    width: 80%;
+
+    /* border-width: 1px;
+    
+    border-color: #9d9d9d !important; */
+    border: 3px solid #9d9d9d;
     border-radius: 20px;
-    border-color: rgba(191,193,195,0.79);
-    border: solid;
   }
-  .npmdownloadcontainer{
-    margin-top: 100px;
-    margin-bottom: 40px;
+  #aboutTitle {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    height: 5em;
+    padding: 0;
+  }
+  #featuresDiv {
+    margin: auto;
+    margin-top: 4em;
+    /* text-align: left; */
+    font-size: 1.5em;
+    font-weight: 200;
+  }
+  #npmdownloadcontainer {
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
     padding-top: 40px;
     padding-bottom: 40px;
     width: 40%;
+    border: 2px solid #9d9d9d;
+    border-radius: 20px;
+    background-color: #e9e9e9;
   }
-  p {
+  /* p {
     margin-top: 30px;
     text-align: center;
     padding-left: 200px;
     padding-right: 200px;
     font-size: 1.5em;
+    font-weight: 200;
+  } */
+  span {
+    cursor: pointer;
   }
 </style>

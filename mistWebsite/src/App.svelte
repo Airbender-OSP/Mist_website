@@ -1,7 +1,7 @@
 <script>
   import Docs from './components/Docs.svelte';
   import Home from './components/Home.svelte';
-  import Features from './components/Features.svelte';
+
   import About from './components/About.svelte';
 
   import Tutorial from './components/Tutorial.svelte';
@@ -46,14 +46,16 @@
       <button on:click={() => home()}>Home</button>
       <button on:click={() => docs()}>Docs</button>
     {/if}
-    <a href="google.com"><img src={githubIcon} alt="Github Link" /></a>
+    <a href="https://github.com/Airbender-OSP/Mist_website"
+      ><img src={githubIcon} alt="Github Link" /></a
+    >
     <!-- <a href="#"><img /></a> -->
   </div>
 </header>
 
 <main>
   {#if homeToggle}
-    <Home />
+    <Home on:click={() => tutorial()} />
   {/if}
   {#if docsToggle}
     <Docs />
@@ -70,10 +72,16 @@
 <style global lang="scss">
   header {
     border-bottom: solid;
+    border-color: #9d9d9d;
     border-width: 3px;
     display: flex;
     justify-content: space-between;
     padding-left: 60px;
+    height: 6em;
+  }
+  header img {
+    width: 50px;
+    height: 50px;
   }
   /* .mist {
   } */
@@ -93,13 +101,26 @@
   }
 
   h1 {
-    color: #ff3e00;
+    color: #6194bc;
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
   }
+  h2 {
+    color: #6194bc;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 100;
+  }
+  p {
+    font-size: 1em;
+    font-weight: 200;
+  }
   button {
-    height: 2em;
+    height: 3em;
+    font-weight: 100;
+    border: 1px solid #9d9d9d;
+    border-radius: 4px;
   }
   @media (min-width: 640px) {
     main {

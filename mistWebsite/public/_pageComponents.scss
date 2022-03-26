@@ -1,24 +1,23 @@
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1{
-    color: navy;
+h1 {
+  color: $textColor;
 }
 header {
-    @include flexCenter();
-    font-family: $primaryFont;
-    background: $mistBlue;   
-    color: $textColor;
-    button{
-       background: $primaryBtn; 
-    }
+  @include flexCenter();
+  font-family: $primaryFont;
+  background: $mistBlue;
+  color: $textColor;
+  button {
+    background: $primaryBtn;
+  }
 }
 
 body {
-    background: $mistBlue;
-    font-family: $primaryFont;
+  background: $mistBlue;
+  font-family: $primaryFont;
 }
-
