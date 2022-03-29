@@ -1,4 +1,9 @@
-<script></script>
+<script>
+  const startBtn = './images/gifs/startbtn.gif';
+  const stopBtn = './images/gifs/stopbtn.gif';
+  const genMetBtn = './images/gifs/generateMetricsbtn.gif';
+  const resMetBtn = './images/gifs/resetMetricsbtn.gif';
+</script>
 
 <article id="tut">
   <div id="tutTitle">
@@ -41,7 +46,7 @@
       </p>
     </div>
     <div class="tutGif">
-      <img href="#" alt="tutorial gif" />
+      <img src={startBtn} alt="tutorial gif" />
     </div>
   </section>
   <section class="tutSection">
@@ -56,7 +61,7 @@
       </p>
     </div>
     <div class="tutGif">
-      <img href="#" alt="tutorial gif" />
+      <img src={stopBtn} alt="tutorial gif" />
     </div>
   </section>
   <section class="tutSection">
@@ -79,7 +84,7 @@
       </p>
     </div>
     <div class="tutGif">
-      <img href="#" alt="tutorial gif" />
+      <img src={genMetBtn} alt="tutorial gif" />
     </div>
   </section>
   <section class="tutSection">
@@ -92,7 +97,7 @@
       </p>
     </div>
     <div class="tutGif">
-      <img href="#" alt="tutorial gif" />
+      <img src={resMetBtn} alt="tutorial gif" />
     </div>
   </section>
   <section class="tutSection">

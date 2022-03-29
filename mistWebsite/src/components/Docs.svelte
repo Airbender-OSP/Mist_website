@@ -101,6 +101,8 @@
     width: 80%;
     float: right;
     background-color: #e9e9e9;
+    border-radius: 20px;
+    border: 3px solid #9d9d9d;
   }
   .docsSec {
     margin-top: 5em;
