@@ -52,15 +52,12 @@
           }}
         />
 
-        <MaterialButton
+        <!-- <MaterialButton
           class="email"
           id="antEmail"
-          text="Email"
+          text="anthonymarin718@gmail.com"
           icon={gmailIcon}
-          onClickFunction={() => {
-            window.open('anthonymarin718@gmail.com');
-          }}
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -283,6 +280,7 @@
     display: flex;
     flex-direction: row;
     align-content: center;
+    justify-content: center;
     margin: auto;
     width: auto;
     flex-wrap: wrap;
