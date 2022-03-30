@@ -4,6 +4,8 @@
   import Home from './Home.svelte';
   let npm = '/images/npm.png';
   let cloud = '/images/cloud.png';
+  // #f9f9f9
+  // #e9e9e9
 </script>
 
 <div id="aboutDiv">
@@ -37,12 +39,15 @@
       <span style="text-decoration: underline" on:click>tutorial</span> to get started!
     </p>
   </div>
-  <div id="npmdownloadcontainer">
-    <a href="https://www.npmjs.com/package/mist-analytics">
-      <img alt="npm" src={npm} />
-      <!-- <span>NPM Download</span> -->
-    </a>
-  </div>
+  <!-- <div id="npmdownloadcontainer"> -->
+  <a
+    href="https://www.npmjs.com/package/mist-analytics"
+    id="npmdownloadcontainer"
+  >
+    <img alt="npm" src={npm} style="height: 30px" />
+    <!-- <span>NPM Download</span> -->
+  </a>
+  <!-- </div> -->
 </div>
 
 <style>
@@ -67,6 +72,7 @@
     border-color: #9d9d9d !important; */
     border: 3px solid #9d9d9d;
     border-radius: 20px;
+    background-color: #e9e9e9;
   }
   #aboutTitle {
     margin-top: 1em;
@@ -85,12 +91,12 @@
     margin: auto;
     margin-top: 3em;
     margin-bottom: 3em;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    width: 40%;
+    padding-top: 1em;
+    padding-bottom: 0.75em;
+    width: 15%;
     border: 2px solid #9d9d9d;
     border-radius: 20px;
-    background-color: #e9e9e9;
+    background-color: #f9f9f9;
   }
   /* p {
     margin-top: 30px;

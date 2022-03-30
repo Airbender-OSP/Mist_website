@@ -57,6 +57,12 @@
           id="antEmail"
           text="anthonymarin718@gmail.com"
           icon={gmailIcon}
+<<<<<<< HEAD
+=======
+          onClickFunction={() => {
+            window.open('anthonymarin718@gmail.com');
+          }}
+>>>>>>> dev
         /> -->
       </div>
     </div>
@@ -96,7 +102,7 @@
           }}
         />
 
-        <MaterialButton
+        <!-- <MaterialButton
           class="email"
           id="ericEmail"
           text="Email"
@@ -104,7 +110,7 @@
           onClickFunction={() => {
             window.open('ericrogerlemay@gmail.com');
           }}
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -145,7 +151,7 @@
           }}
         />
 
-        <MaterialButton
+        <!-- <MaterialButton
           class="email"
           id="kristenEmail"
           text="Email"
@@ -153,7 +159,7 @@
           onClickFunction={() => {
             window.open('kristenwalthoff@gmail.com');
           }}
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -192,7 +198,7 @@
           }}
         />
 
-        <MaterialButton
+        <!-- <MaterialButton
           class="email"
           id="leoEmail"
           text="Email"
@@ -200,7 +206,7 @@
           onClickFunction={() => {
             window.open('lrinkedewit@gmail.com');
           }}
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -239,7 +245,7 @@
           }}
         />
 
-        <MaterialButton
+        <!-- <MaterialButton
           class="email"
           id="stewEmail"
           text="Email"
@@ -247,7 +253,7 @@
           onClickFunction={() => {
             window.open('stewart.elmore@gmail.com');
           }}
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -256,6 +262,8 @@
 <style global lang="scss">
   @use '@material/button/styles';
   @import '../../public/global.scss';
+  // #f9f9f9
+  // #e9e9e9
 
   h1 {
     padding-top: 40px;
@@ -269,12 +277,12 @@
   }
 
   /* Display the columns below each other instead of side by side on small screens */
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: flex;
-    }
-  }
+  // @media screen and (max-width: 650px) {
+  //   .column {
+  //     width: 100%;
+  //     display: flex;
+  //   }
+  // }
 
   .row {
     display: flex;
@@ -292,6 +300,7 @@
     margin: auto;
     width: 250px;
     border-radius: 20px;
+    background-color: #e9e9e9;
   }
 
   .container {
