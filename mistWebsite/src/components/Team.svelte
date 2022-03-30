@@ -55,11 +55,14 @@
         <!-- <MaterialButton
           class="email"
           id="antEmail"
-          text="Email"
+          text="anthonymarin718@gmail.com"
           icon={gmailIcon}
+<<<<<<< HEAD
+=======
           onClickFunction={() => {
             window.open('anthonymarin718@gmail.com');
           }}
+>>>>>>> dev
         /> -->
       </div>
     </div>
