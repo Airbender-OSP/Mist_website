@@ -7,6 +7,7 @@
   import Tutorial from './components/Tutorial.svelte';
   import Team from './components/Team.svelte';
 
+  let mistLogo = '/images/mistLogo.png';
   let githubIcon = '/assets/github120.png';
   let homeToggle = true;
   let docsToggle = false;
@@ -32,7 +33,8 @@
 </script>
 
 <header>
-  <h1 class="mist">mist</h1>
+  <!-- <h1 class="mist">mist</h1> -->
+  <img src={mistLogo} alt="logo" id="mistLogoHeader" />
   <div class="header-div">
     {#if homeToggle}
       <button on:click={() => docs()}>Docs</button>
@@ -47,7 +49,7 @@
       <button on:click={() => docs()}>Docs</button>
     {/if}
     <a href="https://github.com/Airbender-OSP/Mist_website"
-      ><img src={githubIcon} alt="Github Link" /></a
+      ><img src={githubIcon} alt="Github Link" id="githubHeader" /></a
     >
     <!-- <a href="#"><img /></a> -->
   </div>
@@ -79,7 +81,10 @@
     padding-left: 60px;
     height: 6em;
   }
-  header img {
+  #mistLogoHeader {
+    height: 5em;
+  }
+  #githubHeader {
     width: 50px;
     height: 50px;
   }
