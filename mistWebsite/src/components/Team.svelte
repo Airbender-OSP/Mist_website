@@ -275,20 +275,24 @@
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
-      display: block;
+      display: flex;
     }
   }
 
   .row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
     margin: auto;
-    width: max-content;
+    width: auto;
+    flex-wrap: wrap;
   }
 
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     outline: 2px solid #9d9d9d;
     margin: auto;
-    width: 300px;
+    width: 250px;
     border-radius: 20px;
   }
 

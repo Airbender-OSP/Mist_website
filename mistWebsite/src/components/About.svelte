@@ -1,4 +1,10 @@
-<script></script>
+<script>
+  import App from '../App.svelte';
+  import Docs from './Docs.svelte';
+  import Home from './Home.svelte';
+  let npm = '/images/npm.png';
+  let cloud = '/images/cloud.png';
+</script>
 
 <div id="aboutDiv">
   <div id="aboutTitle">
@@ -11,19 +17,32 @@
     </h3>
     <p id="aboutP" style="text-align: left">
       Mist provides a log of the following performance metrics for monitored
-      workers:<br />
+      workers:
+
+      <br />
       <br />
       ➡️ &ensp HTTP request and response times<br />
       ➡️ &ensp Request durations<br />
       ➡️ &ensp Response status codes<br />
       ➡️ &ensp History of previously recorded monitoring sessions<br />
     </p>
+    <!-- <ul id="bullets" list-style-image="url({cloud})">
+      <li>HTTP request and response times</li>
+      <li>Request durations</li>
+      <li>Response status codes</li>
+      <li>History of previously recorded monitoring sessions</li>
+    </ul> -->
     <p style="text-align: center">
       Check out the
       <span style="text-decoration: underline" on:click>tutorial</span> to get started!
     </p>
   </div>
-  <div id="npmdownloadcontainer">NPM Download</div>
+  <div id="npmdownloadcontainer">
+    <a href="https://www.npmjs.com/package/mist-analytics">
+      <img alt="npm" src={npm} />
+      <!-- <span>NPM Download</span> -->
+    </a>
+  </div>
 </div>
 
 <style>
@@ -84,4 +103,9 @@
   span {
     cursor: pointer;
   }
+  /* ul {
+    margin: '200px, 10px, 20px, 100px';
+    align-items: left; */
+  /* list-style-image: url({cloud}); */
+  /* } */
 </style>
