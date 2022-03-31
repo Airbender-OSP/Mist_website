@@ -13,7 +13,7 @@
 </script>
 
 <button
-  style="background-color: #f6f6f6; color: #9d9d9d"
+  style="background-color: #f6f6f6; color: #9d9d9d; margin-bottom: 7px"
   class="mdc-button mdc-button--raised mdc-button--leading"
   {id}
   on:click={onClickFunction}

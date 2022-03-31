@@ -49,7 +49,12 @@
       <button on:click={() => docs()}>Docs</button>
     {/if}
     <a href="https://github.com/Airbender-OSP/Mist_website"
-      ><img src={githubIcon} alt="Github Link" id="githubHeader" /></a
+      ><img
+        src={githubIcon}
+        alt="Github Link"
+        id="githubHeader"
+        style="margin:5px"
+      /></a
     >
     <!-- <a href="#"><img /></a> -->
   </div>
@@ -126,6 +131,7 @@
     font-weight: 100;
     border: 1px solid #9d9d9d;
     border-radius: 4px;
+    margin: 4px;
   }
   @media (min-width: 640px) {
     main {
