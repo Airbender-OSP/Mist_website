@@ -3,6 +3,8 @@
   const stopBtn = './images/gifs/stopbtn.gif';
   const genMetBtn = './images/gifs/generateMetricsbtn.gif';
   const resMetBtn = './images/gifs/resetMetricsbtn.gif';
+  const sql = './images/gifs/sql.gif';
+  const npmgif = './images/npm.gif';
 </script>
 
 <article id="tut">
@@ -12,25 +14,66 @@
   <section class="tutSection">
     <div class="tutText">
       <h2>Getting Started</h2>
-      <p>Requirements, CloudFlare Worker, etc</p>
+      <p>
+        Clone this repo into your local machine in the same directory where the
+        worker you want to test is located. <code
+          >git clone https://github.com/oslabs-beta/mist.git</code
+        >
+        <br />
+        <br />
+        Grab the npm package download text for mist-analytics
+        <br />
+
+        <br />
+        <br />
+        Install the dependencies in the cli by running <code>npm install</code>
+        <br />
+        <br />
+        Create an ENV file in the same level as models folder
+      </p>
     </div>
     <div class="tutGif">
-      <img href="#" alt="tutorial gif" />
-    </div>
-  </section>
-  <section class="tutSection">
-    <div class="tutText">
-      <h2>Download</h2>
-      <p>download stuff</p>
-    </div>
-    <div class="tutGif">
-      <img href="#" alt="tutorial gif" />
+      <img src={npmgif} alt="tutorial gif" />
     </div>
   </section>
   <section class="tutSection">
     <div class="tutText">
       <h2>Database Setup</h2>
-      <p>database instructions</p>
+      <p>
+        Set up a postgreSQL database (we recommend using elephantSQL) and link
+        it to the SQL schema
+        <br />
+        <br />
+        - Copy the link to your empty database
+        <br />
+        - Paste that link into the ENV file and save it as myURI
+        <br />
+        - Open up the mist directory in your terminal
+        <br />
+        - Run the following command:
+        <code>psql -d [url from elephantSQL] -f db_template.sql</code>
+      </p>
+    </div>
+    <div class="tutGif">
+      <img src={sql} alt="tutorial gif" />
+    </div>
+  </section>
+  <section class="tutSection">
+    <div class="tutText">
+      <h2>Start up App</h2>
+      <p>
+        To start up the app, and prepare for a session recording, Run the
+        following scripts:
+        <br />
+        <br />
+        - <code>npm run dev</code> to start the GUI on localhost:8080
+        <br />
+        - <code>node server/server.js</code> to start the server listening on
+        your worker
+        <br />
+        - <code>node --require './server/tracing.js' server/miniflare</code> to start
+        your worker
+      </p>
     </div>
     <div class="tutGif">
       <img href="#" alt="tutorial gif" />
@@ -100,7 +143,7 @@
       <img src={resMetBtn} alt="tutorial gif" />
     </div>
   </section>
-  <section class="tutSection">
+  <!-- <section class="tutSection">
     <div class="tutText">
       <h2>Troubleshooting</h2>
       <p>Maybe we get rid of this</p>
@@ -108,7 +151,7 @@
     <div class="tutGif">
       <img href="#" alt="tutorial gif" />
     </div>
-  </section>
+  </section> -->
 </article>
 
 <style>
@@ -145,6 +188,7 @@
     border-radius: 20px;
     padding: 3em;
     margin-left: 3em;
+    background-color: #e9e9e9;
   }
   /* .tutText p {
       
@@ -154,6 +198,7 @@
     outline: 2px solid #9d9d9d;
     border-radius: 20px;
     width: 35%;
+    background-color: #e9e9e9;
   }
   code {
     font-size: large;
