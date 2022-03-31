@@ -123,7 +123,7 @@
     font-weight: 100;
   }
   p {
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 200;
   }
   button {
