@@ -48,7 +48,7 @@
       <button on:click={() => home()}>Home</button>
       <button on:click={() => docs()}>Docs</button>
     {/if}
-    <a href="https://github.com/Airbender-OSP/Mist_website"
+    <a href="https://github.com/oslabs-beta/mist/tree/dev"
       ><img
         src={githubIcon}
         alt="Github Link"
