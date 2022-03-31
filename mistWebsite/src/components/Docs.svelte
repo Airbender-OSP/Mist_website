@@ -162,8 +162,7 @@
     <div id="navsvelteComponents" class="docsSec">
       <h3>Svelte Components</h3>
       <p>
-        <br />
-        <br /> Svelte Components Inside of the <code>src/components</code>
+        Svelte Components Inside of the <code>src/components</code>
         directory, we hold the Svelte files that create our page's reactive and reusable
         components.
         <br />
@@ -229,22 +228,13 @@
     <div id="navserver" class="docsSec">
       <h3>Server</h3>
       <p>
-        Overview of <code>server.js</code>
-        <br />
-        <br />
         <code>PORT</code> - Our port is set to localhost:3000. <br />
         <br />
         <span class="bold">Route Details</span>
         <br />
         <code
-          >app.post('/allData',
-          metricsController.siftMetrics,metricsController.addMetrics,)</code
-        >
-        - After editing the Miniflare npm file, data from any requests sent to the
-        Miniflare server will be sent in the body of a POST request to this route
-        on the mist server. The request is directed to the metricsController where
-        the siftMetrics method converts the data into the proper format for the database,
-        and the addMetrics method posts the data to the user's SQL database.
+          >app.use('/v1/traces', metricsController.siftMetrics, metricsController.addMetrics)</code>
+        - When the tracing on ***Miniflare*** is complete, the data is exported to the server. It is routed through the <code>metricsController.siftMetrics</code> middleware and then the <code>metricsController.addMetrics</code> middleware to access the needed parts of the trace and post the data to the postgreSQL database, respectively.
         <br />
         <br />
         <code>app.get('/sessionNum', metricsController.getSessionNum)</code> -
@@ -276,7 +266,6 @@
     <div id="navmetrics" class="docsSec">
       <h3>Metrics Controller</h3>
       <p>
-        <br />
         Here, the middleware is defined inside of the controller <br />
         <br />
         <code>metricsController</code> - the controller holds all of our
@@ -323,7 +312,6 @@
     <div id="navdatabase" class="docsSec">
       <h3>Database</h3>
       <p>
-        <br />
         <code>db_template.sql</code> - This file allows users to create an
         instance of a SQL database that matches our template. The user must
         first set up their own postgresQL database and then carry out the
