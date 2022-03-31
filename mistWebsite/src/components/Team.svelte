@@ -14,7 +14,7 @@
 </script>
 
 <div>
-  <h1>Meet The Team!</h1>
+  <h1>Meet The Team</h1>
 </div>
 
 <div class="row">

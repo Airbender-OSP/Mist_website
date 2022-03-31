@@ -9,7 +9,7 @@
 
 <article>
   <section id="documentationNav">
-    <h3 style="font-weight:700">Navigation</h3>
+    <h3 style="font-weight: 100; color: #6194bc">Navigation</h3>
     <div>
       <a id="appSetup" style="cursor: pointer" on:click={(e) => navToggle(e)}>
         App Setup
@@ -62,155 +62,184 @@
     <div id="navappSetup" class="docsSec">
       <h3>App Setup</h3>
       <p>
-        Svelte App
+        <span class="bold">Svelte App</span>
         <br />
-        In the 'App.svelte' file we serve as the top level component, and our primary
-        page for the application, rendering the core components of 'Worker', the
-        Mist title and the Dark Mode toggle button 'Dark Button'. In the script tag,
-        components and theme details are imported to work with. The toggle function
-        for dark mode is declared as well. In the body of this .svelte file, the
-        components are structured and setup to be rendered upon page load. In the
-        style tags, our theme and visual element specifications are defined.
-        <br />
-        <br />
-        Main JS
-        <br />
-        The 'main.js' is the entry point of our application. The 'App.svelte' component
-        is imported, instantiated, binded to the HTML document body, and exported.
+        In the <code>App.svelte</code> file we serve as the top level component,
+        and our primary page for the application, rendering the core components
+        of <code>Worker.svelte</code>, the Mist title, and the Dark Mode toggle
+        button <code>DarkButton.svelte</code>. In the script tag, components and
+        theme details are imported, and the toggle function for dark mode is
+        declared. In the body of this .svelte file, the components are
+        structured and setup to be rendered upon page load. In the style tags,
+        our theme and visual element specifications are defined.
         <br />
         <br />
-        Store
+        <span class="bold">Main JS</span>
         <br />
-        Here in 'store.js', our application's core reactive variables, and visualization
-        data variables are declared and held. We import the 'writable' method from
-        'svelte/store' to provide access to Svelte's store and state management functionality.
-        Each variable is exported from this JS file, so that it is usable in our
-        other files and components. Variables that we want to be reactive to document
-        activity include the writable method. Our variables that hold chart creation
-        data points are not reactive, as they are updated via our 'functions.js'
+        The <code>main.js</code> is the entry point of our application. The
+        <code>App.svelte</code>
+        component is imported, instantiated, bound to the HTML document body, and
+        exported.
+        <br />
+        <br />
+        <span class="bold">Store</span>
+        <br />
+        Here in <code>store.js</code>, our application's core reactive variables
+        and visualization data variables are declared and held. We import the
+        <code>writable</code>
+        method from
+        <code>svelte/store</code> to provide access to Svelte's store and state
+        management functionality. Each variable is exported from this JS file so
+        that it is usable in our other files and components. Variables that we
+        want to be reactive to document activity include the writable method.
+        Our variables that hold chart creation data points are not reactive, as
+        they are updated via our <code>functions.js</code>
         file already.
       </p>
     </div>
     <div id="navFunctions" class="docsSec">
       <h3>Functions</h3>
       <p>
-        Imports
+        <span class="bold">Imports</span>
         <br />
-        In 'functions.js', first the Chart functionality from 'chart.js' is imported.
-        Next, the variables required to generate data are imported from the store.js
+        In <code>functions.js</code>, first the Chart functionality from
+        <code>chart.js</code>
+        is imported. Next, the variables required to generate data are imported from
+        the <code>store.js</code>
         file.
         <br />
         <br />
-        Create Data
+        <span class="bold">Create Data</span>
         <br />
-        The 'createData' function that is defined here generates the data required
-        for population of the scatter chart, pie chart and bar graph. The chart data
-        is also reset via the reassignment of data variables to 0. Note - this function
-        is not invoked here, but instead in 'Worker.svelte' This function takes in
-        parameters of logs and avgLogs which contain the backend data we require.
-        We use the duration data to generate y-axis plot points for length of duration
-        on the scatter chart. We use the status code data to categorize our y-axis
-        plot points in the scatter chart, and additionally for the population of
-        our Pie Chart data that provides a breakout summary of function Successes
-        and Failures. We use the 'avgLogs' data to generate the average duration
-        of the functions we ran analytics on, for each of the previous 5 sessions.
+        The <code>createData</code> function that is defined here generates the
+        data required for population of the scatter chart, pie chart and bar
+        graph. The chart data is also reset via the reassignment of data
+        variables to 0. Note - this function is not invoked here, but instead in
+        <code>Worker.svelte</code>. This function takes in parameters of
+        <code>logs</code>
+        and <code>avgLogs</code> which contain the backend data we from a
+        recording session. We use the duration of the recording session to
+        generate x-axis plot points on the scatter chart. We use the status
+        code, start time, and response time from the recorded <code>logs</code>
+        to categorize our y-axis plot points in the scatter chart, and additionally
+        for the population of our Pie Chart's summary of response Successes and Errors.
+        We use the <code>avgLogs</code> data to generate the average duration of
+        the request response times recorded for each of the previous 5 recording
+        sessions.
         <br />
         <br />
-        Charting Functions
+        <span class="bold">Charting Functions</span>
         <br />
-        The 'createScatterChart' function uses the data variables (succs, errs, labels)
-        to define the dataset and styling details to be used in the chart configuration.
-        Constant 'config' utilizes Chart.js documentation guidelines to create the
-        configuration and chart details such as axes, labels, gridlines and sizing.
-        Constant 'scatterChart' creates the chart and connects it to the document
-        element 'scatterChart'.
+        The <code>createScatterChart</code> function uses the data variables
+        (succs, errs, labels) to define the dataset and styling details to be
+        used in the chart configuration. Constant <code>config</code> utilizes
+        Chart.js documentation guidelines to create the configuration and chart
+        details such as axes, labels, gridlines and sizing. Constant
+        <code>scatterChart</code>
+        creates the chart and connects it to the
+        <code>ScatterChart.svelte</code>
+        component.
         <br />
-        The'createPieChart' function uses the data variables (pieData, pieLabels)
-        to define the dataset and styling details that are used in the chart configuration.
-        The configuration details based on Chart.js documentation guidelines are
-        defined in const 'config'. Const 'doughnutChart' creates the chart and connects
-        it to the document element 'doughnutChart'.
         <br />
-        The 'createBarGraph' function uses the data variables (sessNums, sessAvgs)
-        to define the dataset and styling details that are used in the chart configuration.
-        The configuration details based on Chart.js documentation guidelines are
-        defined in const 'config'. Const 'barGraph' creates the chart and connects
-        it to the document element 'barGraph'.
+        The <code>createPieChart</code> function uses the data variables (<code
+          >pieData</code
+        >, <code>pieLabels</code>) to define the dataset and styling details
+        that are used in the chart configuration. The configuration details
+        based on Chart.js documentation guidelines are defined in const
+        <code>config</code>. Const <code>doughnutChart</code> creates the chart
+        and connects it to the <code>doughnutChart.svelte</code> component.
+        <br />
+        <br />
+        The <code>createBarGraph</code> function uses the data variables (<code
+          >sessNums</code
+        >, <code>sessAvgs</code>) to define the dataset and styling details that
+        are used in the chart configuration. The configuration details based on
+        Chart.js documentation guidelines are defined in const
+        <code>config</code>. Const <code>barGraph</code> creates the chart and
+        connects it to the <code>BarGraph.svelte</code> component.
       </p>
     </div>
     <div id="navsvelteComponents" class="docsSec">
       <h3>Svelte Components</h3>
       <p>
         <br />
-        <br /> Svelte Components Inside of the src/components directory, we hold
-        the Svelte files that create our page's reactive and reusable
+        <br /> Svelte Components Inside of the <code>src/components</code>
+        directory, we hold the Svelte files that create our page's reactive and reusable
         components.
         <br />
         <br />
-        Worker
+        <span class="bold">Worker</span>
         <br />
-        In Worker.svelte we define the core page structure of our analytics visualization,
-        along with the connectivity to the server and database info retrieval, that
-        gets displayed on the dashboard. In script we begin by importing each modularized
-        chart component, reactive variables from store.js, and data/chart creation
-        functionality from functions.js. The variables workerTimer, 'chartFlag' and
-        'mockLogArray' are marked reactive by the $: syntax.
+        In <code>Worker.svelte</code> we define the core page structure of our
+        analytics visualization, along with the connectivity to the server and
+        database info retrieval, that gets displayed on the dashboard. In script
+        we begin by importing each modularized chart component, reactive
+        variables from <code>store.js</code>, and data/chart creation
+        functionality from <code>functions.js</code>. The variables
+        <code>workerTimer</code>, <code>chartFlag</code> and
+        <code>mockLogArray</code> are marked reactive by the <code>$:</code>
+        syntax.
         <br />
         <br />
-        Functions
-        <br /> 'start' - The functionality to mark the beginning of data
-        collection and retrieve the session number from our server/database is
-        defined here.
-        <br /> 'stop' - The functionality to mark the end of data collection,
-        and retrieve the sessionLogs data is defined here. This data is used to
-        create the mockLogArray which is utilized in the creation of duration
-        and status data for our charts. A second fetch request obtains the
-        information to populate the mockAvgsArray for our previous 5 session
+        <span class="bold">Functions</span>
+        <br /> <code>start</code> - The functionality to mark the beginning of
+        data collection and retrieve the session number from our server/database
+        is defined here.
+        <br /> <code>stop</code> - The functionality to mark the end of data
+        collection, and retrieve the sessionLogs data is defined here. This data
+        is used to create the mockLogArray which is utilized in the creation of
+        duration and status data for our charts. A second fetch request obtains
+        the information to populate the mockAvgsArray for our previous 5 session
         info graph.
-        <br /> 'chart' - Here, the chart data is created, and each chart that
-        displays data for the worker is created. An initial check is in place to
-        validate that any recent data has been reset prior to another session of
-        data collection.
-        <br /> 'resetChart' - The functionality for resetting chart data is
-        located here.
+        <br /> <code>chart</code> - Here, the chart data is created, and each
+        chart that displays data for the worker is created. An initial check is
+        in place to validate that any recent data has been reset prior to
+        another session of data collection.
+        <br /> <code>resetChart</code> - The functionality for resetting chart
+        data is located here.
         <br />
         <br />
-        Main/Style
+        <span class="bold">Main/Style</span>
         <br />
-        In body, the page structure of chart text, component layout, along with buttons
-        are defined, and conditional rendering settings are created here. In style,
+        In body, the page structure of chart text, component layout, and buttons
+        are defined. Conditional rendering settings are also created here. In style
         the start button status color updates, and Pie Chart sizing and styling details
         are set.
         <br />
         <br />
-        Components
-        <br /> DarkButton.svelte - The toggle button for dark mode is defined,
-        and styling for the button are establised.
-        <br /> 'Table.svelte' - The 'mockLogArray' data for table population is
-        imported from 'store.js'. The table structure and looping mechanism
-        through 'mockLogArray' to populate the table with the number of
-        functional metrics objects received is performed, along with general
-        styling.
+        <span class="bold">Components</span>
+        <br /> <code>DarkButton.svelte</code> - The toggle button for dark mode
+        is defined, and styling for the button are establised.
+        <br /> <code>Table.svelte</code> - The <code>mockLogArray</code> data
+        for table population is imported from <code>store.js</code>. The table
+        structure and looping mechanism through <code>mockLogArray</code> to
+        populate the table with the number of functional metrics objects
+        received is performed, along with general styling.
         <br />
         <br />
-        Charts
+        <span class="bold">Charts</span>
         <br />
-        In each of the svelte files for 'ScatterChart', 'PieChart' and 'BarGraph'
+        In each of the svelte files for <code>ScatterChart</code>,
+        <code>PieChart</code>
+        and <code>BarGraph</code>
         the chart is instantiated onto a canvas element with it's relevant id, and
-        fundamental style structure is setup.
+        fundamental style structure is established.
       </p>
     </div>
     <div id="navserver" class="docsSec">
       <h3>Server</h3>
       <p>
-        Overview of 'server.js'
+        Overview of <code>server.js</code>
         <br />
         <br />
-        PORT - Our port is set to localhost:3000. <br />
+        <code>PORT</code> - Our port is set to localhost:3000. <br />
         <br />
-        Route Details
+        <span class="bold">Route Details</span>
         <br />
-        'app.post('/allData', metricsController.siftMetrics,metricsController.addMetrics,)'
+        <code
+          >app.post('/allData',
+          metricsController.siftMetrics,metricsController.addMetrics,)</code
+        >
         - After editing the Miniflare npm file, data from any requests sent to the
         Miniflare server will be sent in the body of a POST request to this route
         on the mist server. The request is directed to the metricsController where
@@ -218,24 +247,30 @@
         and the addMetrics method posts the data to the user's SQL database.
         <br />
         <br />
-        'app.get('/sessionNum', metricsController.getSessionNum)' - This function
-        is invoked when a user presses "start" on the front-end. It routes to metricsController.getSessionNum
-        middleware. This function responds with a string confirming that the sessionNum
+        <code>app.get('/sessionNum', metricsController.getSessionNum)</code> -
+        This function is invoked when a user presses <code>Start</code> on the
+        GUI. It routes to <code>metricsController.getSessionNum</code>
+        middleware. This function responds with a string confirming that the
+        <code>sessionNum</code>
         has been set. <br />
         <br />
-        'app.get('/sessionLogs', metricsController.getSessionLogs)' - The metricsController.getSessionLogs
-        middleware is invoked when a user presses 'stop' on the front-end. This sends
-        a GET request to the '/sessionLogs' endpoint and a query is sent to the database.
-        This query retrieves all the metrics associated with the current sessionNum
-        and stores them in res.locals. Once the metrics are stored we return a response
-        back to the frontend with our res.locals.logs json parsed. <br />
+        <code>app.get('/sessionLogs', metricsController.getSessionLogs)</code> -
+        The <code>metricsController.getSessionLogs</code>
+        middleware is invoked when a user presses <code>Stop</code> on the GUI.
+        This sends a GET request to the '/sessionLogs' endpoint, and a query is
+        sent to the database. This query retrieves all of the metrics associated
+        with the current <code>sessionNum</code>
+        and stores them in <code>res.locals</code>. Once the metrics are stored
+        we return a response back to the frontend with our
+        <code>res.locals.logs</code>
+        json parsed. <br />
         <br />
-        'app.use('/\*')' - Here we have a catch-all route handler for requests made
-        to an unknown route.
+        <code>app.use('/\*')</code> - Here we have a catch-all route handler for
+        requests made to an unknown route.
         <br />
         <br />
-        'app.use' - Finally, we have a error handler for any errors that occur during
-        middleware invocations.
+        <code>app.use</code> - Finally, we have a error handler for any errors that
+        occur during middleware invocations.
       </p>
     </div>
     <div id="navmetrics" class="docsSec">
@@ -244,52 +279,65 @@
         <br />
         Here, the middleware is defined inside of the controller <br />
         <br />
-        'metricsController' - the controller holds all of our middleware (getSessionNum,
-        getSessionLogs, siftMetrics and addMetrics). The key 'sessionNum' has a value
-        that is equal to the current session number and defaults to 1. <br />
+        <code>metricsController</code> - the controller holds all of our
+        middleware (<code>getSessionNum</code>,
+        <code>getSessionLogs</code>, <code>siftMetrics</code> and
+        <code>addMetrics</code>). The key <code>sessionNum</code> has a value
+        that is equal to the current session number and defaults to 1.<br />
         <br />
-        'getSessionNum' - This middleware is invoked when a dev presses "start" on
-        the front-end. Our database query looks up the highest stored sessionNum,
-        which corresponds to the last recorded session, and incremenets that integer
-        by 1. A session is defined as data collected from when a dev clicks start**
-        until they click stop. The sessionNum is stored in our metricsController
-        and is defaulted to one for new devs. This property will be used later by
-        siftMetrics. <br />
+        <code>getSessionNum</code> - This middleware is invoked when a dev
+        presses <code>Start</code> on the GUI. Our database query looks up the
+        highest stored <code>sessionNum</code>, which corresponds to the last
+        recorded session, and incremenets that integer by 1. A session is
+        defined as data collected from when a dev clicks <code>Start</code>
+        until <code>Stop</code> is pressed. The <code>sessionNum</code> is
+        stored in our <code>metricsController</code>
+        and is defaulted to one. This property will be used later by
+        <code>siftMetrics</code>. <br />
         <br />
-        'getSessionLogs' - This middleware is invoked when a dev presses "stop" on
-        the front-end of mist. A query is sent to the database that selects all logs
-        from the current session. This data is saved in an array of objects on res.locals.logs.
+        <code>getSessionLogs</code> - This middleware is invoked when a dev
+        presses <code>Stop</code> on the GUI. A query is sent to the database
+        that selects all logs from the current session. This data is saved in an
+        array of objects on <code>res.locals.logs</code>.
         <br />
         <br />
-        'siftMetrics' - This middleware destructures the method, URL, status, and
-        response time data from the POST request body. These data points are saved
-        in a 'metrics' object; response time is converted into a unit-less number
-        before being saved. This controller also captures the current session number
-        and the time that the request hits the controller and saves both data points
-        in the metrics object. <br />
+        <code>siftMetrics</code> - This middleware destructures the method, URL,
+        status, and response time data from the POST request body. These data
+        points are saved in a <code>metrics</code> object; response time is
+        converted into a unit-less number before being saved. This controller
+        also captures the current session number and the time that the request
+        is received by the controller and saves both data points in the
+        <code>metrics</code>
+        object. <br />
         <br />
-        'addMetrics' - The addMetrics middleware is triggered after the metricsController.siftMetrics
-        middleware executes and saves metrics data in an object called 'metrics'
-        in 'res.locals.metrics'. Once we are in the addMetrics middleware, res.locals.metrics
-        is destructured and the data that we gathered is injected into an SQL query
-        and saved in the user database.
+        <code>addMetrics</code> - This middleware is triggered after the
+        <code>metricsController.siftMetrics</code>
+        middleware executes and saves metrics data in an object called
+        <code>metrics</code>
+        in <code>res.locals.metrics</code>. Once in the <code>addMetrics</code>
+        middleware, <code>res.locals.metrics</code>
+        is destructured and the gathered data is injected into an SQL query and saved
+        in the user database.
       </p>
     </div>
     <div id="navdatabase" class="docsSec">
       <h3>Database</h3>
       <p>
         <br />
-        'db_template.sql' - This file allows users to create an instance of a SQL
-        database that matches our template. The user must first set up their own
-        postgresQL database and then carry out the terminal commands from the README
+        <code>db_template.sql</code> - This file allows users to create an
+        instance of a SQL database that matches our template. The user must
+        first set up their own postgresQL database and then carry out the
+        terminal commands from the <code>README</code>
         to forge the link. All of the SQL commands in this file will be executed
         on their database, creating the *metrics* table with the appropriate columns.
         <br />
         <br />
-        'metrics_model.js' - This is where the user inputs the URI of the postgresQL
-        database they created. The user will have used our db_template.sql to instantiate
-        a SQL database that contains our metrics table. Our metrics_model is exported
-        and then imported in the metricsController.js file.
+        <code>metrics_model.js</code> - This is where the user inputs the URI of
+        the postgreSQL database they created. The user will have used our
+        <code>db_template.sql</code>
+        to instantiate a SQL database that contains our metrics table. Our
+        <code>metrics_model</code>
+        is exported, and then imported to the <code>metricsController.js</code> file.
       </p>
     </div>
     <!-- <p>Yes</p>
@@ -320,7 +368,13 @@
 
 <style>
   h3 {
-    font-weight: 300;
+    font-weight: 400;
+  }
+  a {
+    font-weight: 100;
+  }
+  a:hover {
+    color: #6194bc;
   }
   article {
     display: flexbox;
@@ -329,6 +383,9 @@
   /* p { */
   /* text-align: left; */
   /* } */
+  .bold {
+    font-weight: 300;
+  }
   #documentationNav {
     /* border-right: 3px solid #9d9d9d; */
 
@@ -349,5 +406,15 @@
     margin-left: 3em;
     margin-right: 3em;
     text-align: left;
+    outline: 2px solid #9d9d9d;
+    border-radius: 20px;
+    padding: 1em;
+    background-color: #f9f9f9;
+  }
+  code {
+    font-size: 200;
+    outline: 1px solid #b3b3b3;
+    border-radius: 3px;
+    background-color: #e9e9e9;
   }
 </style>

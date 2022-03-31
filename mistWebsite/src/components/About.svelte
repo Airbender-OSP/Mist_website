@@ -36,7 +36,9 @@
     </ul> -->
     <p style="text-align: center">
       Check out the
-      <span style="text-decoration: underline" on:click>tutorial</span> to get started!
+      <span id="aboutTutLink" style="text-decoration: underline" on:click
+        >tutorial</span
+      > to get started!
     </p>
   </div>
   <!-- <div id="npmdownloadcontainer"> -->
@@ -108,6 +110,9 @@
   } */
   span {
     cursor: pointer;
+  }
+  span:hover {
+    color: #6194bc;
   }
   /* ul {
     margin: '200px, 10px, 20px, 100px';

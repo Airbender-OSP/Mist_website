@@ -4,7 +4,8 @@
   const genMetBtn = './images/gifs/generateMetricsbtn.gif';
   const resMetBtn = './images/gifs/resetMetricsbtn.gif';
   const sql = './images/gifs/sql.gif';
-  const npmgif = './images/npm.gif';
+  const npmgif = './images/gifs/npm.gif';
+  const startApp = './images/gifs/startApp.gif';
 </script>
 
 <article id="tut">
@@ -29,15 +30,15 @@
         Install the dependencies in the cli by running <code>npm install</code>
         <br />
         <br />
-        Create an ENV file in the same level as models folder
+        Create a .env file in the root of the mist directory
       </p>
     </div>
     <div class="tutGif">
-      <img src={npmgif} alt="tutorial gif" />
+      <img src={npmgif} alt="tutorial gif" style="height: 400px;" />
     </div>
   </section>
   <section class="tutSection">
-    <div class="tutText">
+    <div class="tutText" style="height: 400px;">
       <h2>Database Setup</h2>
       <p>
         Set up a postgreSQL database (we recommend using elephantSQL) and link
@@ -54,8 +55,8 @@
         <code>psql -d [url from elephantSQL] -f db_template.sql</code>
       </p>
     </div>
-    <div class="tutGif">
-      <img src={sql} alt="tutorial gif" />
+    <div class="tutGif" style="height: 400px;">
+      <img src={sql} alt="tutorial gif" style="height: 450px;" />
     </div>
   </section>
   <section class="tutSection">
@@ -76,7 +77,11 @@
       </p>
     </div>
     <div class="tutGif">
-      <img href="#" alt="tutorial gif" />
+      <img
+        src={startApp}
+        alt="tutorial gif"
+        style="height: 450px; overflow: hidden; float: bottom;"
+      />
     </div>
   </section>
   <section class="tutSection">
@@ -115,13 +120,13 @@
         request/response logs, calculating datasets to be fed to the charting
         library. After a couple of seconds the metrics will render to the page,
         providing the following:<br /> <br />
-        &ensp ➡️ &ensp A <span style="font-weight: bold">table</span> displaying
+        &ensp ➡️ &ensp A <span style="color: #6194bc;">table</span> displaying
         each request log <br />
-        &ensp ➡️ &ensp A <span style="font-weight: bold">scatter chart</span>
+        &ensp ➡️ &ensp A <span style="color: #6194bc;">scatter chart</span>
         visualizing the recording session <br />
-        &ensp ➡️ &ensp A <span style="font-weight: bold">pie chart</span>
+        &ensp ➡️ &ensp A <span style="color: #6194bc;">pie chart</span>
         visualizing total successes and errors <br />
-        &ensp ➡️ &ensp A <span style="font-weight: bold">bar graph</span>
+        &ensp ➡️ &ensp A <span style="color: #6194bc;">bar graph</span>
         visualizing the average response time from the previous five recording sessions
         <br />
       </p>
@@ -186,24 +191,25 @@
     text-align: left;
     outline: 2px solid #9d9d9d;
     border-radius: 20px;
-    padding: 3em;
-    margin-left: 3em;
+    padding: 1em;
+    margin-left: 7em;
     background-color: #e9e9e9;
   }
   /* .tutText p {
       
   } */
   .tutGif {
-    margin-right: 3em;
+    margin-right: 7em;
     outline: 2px solid #9d9d9d;
     border-radius: 20px;
-    width: 35%;
+    width: 25%;
     background-color: #e9e9e9;
+    overflow: hidden !important;
   }
   code {
-    font-size: large;
-    outline: 2px solid #b3b3b3;
+    font-size: 200;
+    outline: 1px solid #b3b3b3;
     border-radius: 3px;
-    background-color: #b3b3b3;
+    background-color: #f9f9f9;
   }
 </style>
